@@ -24,7 +24,7 @@ def formulario():
         conn = get_connection()
         cursor = conn.cursor()
 
-        query = "INSERT INTO Usuarios (nombre, apellido) VALUES (%s, %s)"
+        query = "INSERT INTO usuarios (nombre, apellido) VALUES (%s, %s)"
         cursor.execute(query, (nombre, apellido))
         conn.commit()
 
@@ -37,3 +37,4 @@ def formulario():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=3000)
+
